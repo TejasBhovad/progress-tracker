@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+  overflow: hidden;
+}
+
+.home {
+  position: absolute;
+  background: linear-gradient(#1a014e, #3a0168);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 5%;
+  margin-top: 0;
+  overflow: hidden;
+  min-height: 5.5rem;
+}
+
+#nav {
+  list-style-type: none;
+  margin-left: 7.5%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  z-index: 9;
+}
+#nav li {
+  display: inline;
+  font-size: 4rem;
+  font-weight: bold;
+}
+#nav .main-list {
+  width: 100%;
+  height: 100%;
+}
+#nav svg {
+  width: 4rem;
+  padding-top: 25%;
+  height: 4rem;
+  fill: #b694ff;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.display {
+  width: 90%;
+  height: 100%;
+}
+
+.active {
+  height: 80%;
+  display: flex;
+  max-height: 25rem;
+}
+
+.progress-bar {
+  margin-top: 1%;
+  height: 25%;
+  min-height: 4rem;
+  max-height: 5rem;
+}
+
+#left {
+  background: -webkit-linear-gradient(#fd0189, #aa005b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list-main-contain {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.075);
+  border-radius: 0.75rem;
+  height: 90%;
+  margin-left: 2.5%;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 255, 255, 0), 0.3em 0.3em 1em rgba(0, 0, 0, 0.2);
+}
+
+.progress-contain {
+  height: 100%;
+  width: 100%;
+}
+
+.bar-vessel {
+  height: 4vw;
+  max-height: 4rem;
+  width: 80%;
+  margin-left: 2.5%;
+  background-color: #73003d;
+  border-radius: 0.75rem;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.15);
+  border-width: 0.5rem;
+}
+
+.bar-contain {
+  transition: ease-in-out 0.4s;
+  width: 20%;
+  height: 100%;
+  background: #aa005b;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: linear-gradient(135deg, #aa005b 0%, #fd0189 100%);
+}
+
+input[type=text] {
+  margin-left: 4.5%;
+  width: 85%;
+  background-color: rgba(221, 221, 255, 0);
+  color: #b694ff;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.main-list {
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+}
+
+button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(250, 235, 215, 0);
+  border: none;
+}
+
+svg.cross {
+  width: 2rem;
+  height: 2rem;
+  transform: translateX(-0.25rem) translateY(0rem);
+  fill: rgba(255, 255, 255, 0.25);
+  transition: ease-in-out 0.085s;
+  cursor: pointer;
+}
+
+.cross:hover {
+  fill: rgba(255, 255, 255, 0.5);
+  transition: ease-in-out 0.085s;
+}
+
+.add {
+  width: 5rem;
+  height: 5rem;
+  transform: translateX(-1rem) translateY(-0.4rem);
+  fill: rgba(255, 255, 255, 0.25);
+  transition: ease-in-out 0.085s;
+  cursor: pointer;
+}
+
+.add:hover {
+  transition: ease-in-out 0.085s;
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+input[type=checkbox] {
+  width: 1.5rem;
+  cursor: pointer;
+  height: 1.5rem;
+  background-color: #6b39cf;
+  opacity: 0.25;
+}
+
+input:checked {
+  opacity: 1;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-style: ridge;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-width: 0.1rem;
+}
+
+input[type=checkbox]:checked + input.strike {
+  text-decoration: line-through;
+  color: #6b3bd3;
+  opacity: 0.75;
+}
+
+.add-button {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 2.5%;
+  margin-left: 0.75%;
+  background-color: rgba(250, 235, 215, 0);
+  border: none;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.rectangle {
+  background-color: #6b39cf;
+  border-radius: 0.25rem;
+  transform: translateY(0.2rem);
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.rectangle .check {
+  transform: translateY(0.25rem) translateX(0.1rem);
+  fill: #b694ff;
+}
+
+@media screen and (max-width: 768px) {
+  .list-container {
+    display: block;
+  }
+  .active {
+    height: 85%;
+    max-height: 55rem;
+  }
+}/*# sourceMappingURL=Home.css.map */
